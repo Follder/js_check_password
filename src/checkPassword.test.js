@@ -36,4 +36,8 @@ describe(`Function 'checkPassword':`, () => {
   it(`should return 'false' if we haven't special symbol`, () => {
     expect(checkPassword('Password11')).toEqual(false);
   });
+
+  it(`should return 'false' if we have cyrillic characters`, () => {
+    expect(checkPassword('Пароле1!')).toEqual(false);
+  });
 });
